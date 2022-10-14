@@ -1,0 +1,1 @@
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, 'Ahmed Mehamed', 'mehamedseid001@gmail.com', NULL, '1234', NULL, '2022-10-14 20:26:47', '2022-10-14 20:26:47');
