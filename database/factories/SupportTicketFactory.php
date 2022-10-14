@@ -17,7 +17,7 @@ class SupportTicketFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'questions' => $faker->paragraph(),
         ];
     }
 }

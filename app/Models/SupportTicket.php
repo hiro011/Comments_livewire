@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class SupportTicket extends Model
 {
     use HasFactory;
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
 }
