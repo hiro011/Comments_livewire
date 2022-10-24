@@ -1,9 +1,9 @@
 
 
 <div class="flex justify-center">
-    <div class="w-6/12">
+    <div class="bg-blue-100 p-3" style="border-radius: 5px">
         
-        <h1 class="font-bold my-10 text-3xl">Comments</h1>
+        <h1 class="font-bold my-2 text-center text-3xl">Comments</h1>
 
         @error('newComment')
             <span class="text-red-500 text-xs">{{$message}}</span>
@@ -38,7 +38,7 @@
         </form> 
         
         @foreach ($comments as $comment)
-            <div class="rounded border shadow p-3 my-2 ">
+            <div class="rounded border shadow p-3 my-2 bg-blue-100">
                 <div class="flex justify-between my-2">
                     <div class="flex">
                         <p class="font-bold text-lg">{{$comment->creator->name}}</p>
@@ -46,13 +46,19 @@
                     </div>
                     <i class="fas fa-times text-red-400 hover:text-red-600 cursor-pointer" wire:click="remove({{$comment->id}})"></i>
                 </div>
-                <p class="text-gray-800">{{$comment->body}}</p>
+                {{-- <div class="flex justify-start"> --}}
+                    <p>{{$comment->body}}</p>
+                    @if ($comment->image) 
+                        <img src="{{ $comment->imagePath }}" alt="image" width="500" class="rounded">
+                    @endif
+                {{-- </div> --}}
+
             </div>
         @endforeach
 
         {{ $comments->links() }}
 
-        <div class="justify-center rounded border shadow p-3 my-2">
+        <div class="flex rounded border shadow p-3 my-2 bg-gray-200">
             <h2>Nothing in the world is as soft and yielding as water.</h2>
             <h2>The best athlete wants his opponent at his best.</h2>
             <h2> To attain knowledge, add things every day.</h2>
