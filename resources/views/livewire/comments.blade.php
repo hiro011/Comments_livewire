@@ -1,7 +1,7 @@
 
 
 <div class="flex justify-center">
-    <div class="bg-blue-100 p-3" style="border-radius: 5px">
+    <div class="bg-blue-200 p-3" style="border-radius: 5px">
         
         <h1 class="font-bold my-2 text-center text-3xl">Comments</h1>
 

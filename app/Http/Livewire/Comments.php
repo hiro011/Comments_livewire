@@ -52,7 +52,7 @@ class Comments extends Component
         $this->newComment = "";
         $this->image = "";
 
-        session()->flash('message-add', 'Comment add successfully :D !');
+        session()->flash('message-add', 'Comment add successfully 😃 !');
     }
     public function storeImage()
     {
@@ -74,7 +74,7 @@ class Comments extends Component
         }
         $comment->delete();
 
-        session()->flash('message-remove', 'Comment deleted successfully :) !');
+        session()->flash('message-remove', 'Comment deleted successfully 🙂 !');
     }
 
     public function render()
