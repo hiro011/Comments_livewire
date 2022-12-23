@@ -2,7 +2,7 @@
 	- how to add to github -
 	git add .
 	git commit -m "15 commit"
-	git push
+	git push comments-livewire HEAD:master
 	
 	- git diff
 	Scm Diff Decorations

@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-
-class Comment extends Model
+class DisscussionTicket extends Model
 {
     use HasFactory;
-
+    
     protected $guarded = [];
 
     public function creator()
@@ -18,14 +17,14 @@ class Comment extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    // public function liked()
-    // {
-    //     return $this->belongsToMany(Likes::class, 'user_id', 'user_id');
-    // }
-
     public function getImagePathAttribute()
     {
         return Storage::disk('public')->url($this->image);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
 }

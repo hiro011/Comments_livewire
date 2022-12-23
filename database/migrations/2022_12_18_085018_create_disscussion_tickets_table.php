@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('support_tickets', function (Blueprint $table) {
+        Schema::create('disscussion_tickets', function (Blueprint $table) {
             $table->id();
             $table->string('question');
+            $table->string('image')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->integer('vote');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('support_tickets');
+        Schema::dropIfExists('disscussion_tickets');
     }
 };
