@@ -53,9 +53,9 @@
 		<hr>
         <div>
 			<input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="Search comments..." 
-			wire:model="searchKey">
+			    title="search" wire:model="searchKey">
         </div>
- {{-- wire:loading.@class(['p-4', 'font-bold' => true]) --}}
+ {{-- wire:loading.@class(['font-bold' => true]) --}}
         @foreach ($comments as $comment)
             <div class="rounded border shadow p-3 my-2 bg-blue-100" >
                 <div class="flex justify-between my-2">

@@ -48,7 +48,7 @@
     <hr>
     <div class="flex">
     	<input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="Search disscussion..." 
-        wire:model="searchKey">
+			title="search" wire:model="searchKey">
     </div> 
 
     @foreach ($discussions as $discussion)
