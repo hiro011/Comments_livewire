@@ -23,10 +23,10 @@
 
     <section class="flex justify-center my-2">
         @if($disscussionImage)
-            <img src="{{$disscussionImage}}" width="200"> </br>
+            <label for="disscussImage" class="cursor-pointer"> <img src="{{$disscussionImage}}" width="200"> </label>
             </br> 
         @else
-            <label for="image" class="border rounded px-5 py-3 border-black bg-white shadow imgBox cursor-pointer"> Add image </label>
+            <label for="disscussImage" class="border rounded px-5 py-3 border-black bg-white shadow imgBox cursor-pointer"> Add image </label>
             </br> 
         @endif
         <input type="file" id="disscussImage" class="cursor-pointer d-none" wire:change="$emit('fileChoosen2')">
