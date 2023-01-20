@@ -27,5 +27,10 @@
                 </div>
             </div>
         </form>
+        <div class="flex justify-around my-4">
+          <div class="flex flex-wrap w-10/12">
+              <a href="/register" class="w-full text-red-400 underline text-center cursor-pointer">Create new account</a>
+          </div>
+        </div>
     </section>
 </div>

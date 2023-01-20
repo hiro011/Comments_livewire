@@ -70,6 +70,10 @@
                 </div>
             </div>
         </form>
+        <div class="text-center">
+          Already have an account?
+          <a href="/login" class="text-red-400 underline">login</a>
+        </div>
     </section>
 
     <script>

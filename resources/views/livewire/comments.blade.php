@@ -28,9 +28,9 @@
             @if($image)
                 <label for="image" class="cursor-pointer"> <img src="{{$image}}" width="200"> </label>
                 </br> 
-            @else
+            {{-- @else
                 <label for="image" class="border rounded px-5 py-3 border-black bg-white shadow imgBox cursor-pointer"> Add image </label>
-                </br> 
+                </br>  --}}
             @endif
             <input type="file" name="imageFile" id="image" class="cursor-pointer d-none" wire:change="$emit('fileChoosen')">
         </section>
@@ -45,6 +45,9 @@
         <form class="my-4 flex" wire:submit.prevent="addcomment">
             <input type="text" class="w-full rounded border shadow p-2 mr-2 my-2" placeholder="write a comment" 
             wire:model.debounce.500ms="newComment">
+            <label for="image" class="my-2 cursor-pointer" title="Add image">
+                 <i class="fa fa-image fa-2x"></i> 
+            </label>
             <div class="py-2">
                 <button type="submit" class="p-2 bg-info w-20 rounded shadow text-white" >Add</button>
             </div>
